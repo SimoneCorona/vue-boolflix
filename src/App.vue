@@ -1,23 +1,26 @@
 <template>
-  <div id="app">
-
-  </div>
+<div>
+  <MyAppNavbar />
+  <MyAppMain />
+</div>  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyAppNavbar from './components/MyAppNavbar.vue'
+import MyAppMain from './components/MyAppMain.vue'
 
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    MyAppNavbar,
+    MyAppMain,
+}
 }
 </script>
 
 <style lang="scss">
-@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 
