@@ -1,9 +1,9 @@
 <template>
     <div>
-        <h1>{{ moviesArray.title }}</h1>
-        <h2>{{ moviesArray.original_title }}</h2>
-        <p>{{ moviesArray.original_language }}</p>
-        <p>{{ moviesArray.vote_average }}</p>
+        <h1>{{ movie.title }}</h1>
+        <h2>{{ movie.original_title }}</h2>
+        <p>{{ movie.original_language }}</p>
+        <p>{{ movie.vote_average }}</p>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
 export default {
     name: 'MyAppFilmCards',
     props: {
-        moviesArray: Array
+        movie: Object
     },
 }
 </script>

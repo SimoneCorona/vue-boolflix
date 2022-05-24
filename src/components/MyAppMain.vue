@@ -1,6 +1,6 @@
 <template>
     <main>
-        <MyAppFilmCards v-for="element in moviesArray" :key="element.index" :moviesArray="element" />
+        <MyAppFilmCards v-for="element in moviesArray" :key="element.index" :movie="element" />
     </main>
 </template>
 

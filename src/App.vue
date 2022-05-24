@@ -2,7 +2,7 @@
 
 <div>
   <MyAppNavbar @startSearch="search($event)" @startAnotherSearch="anotherSearch($)"/>
-  <MyAppMain />
+  <MyAppMain :moviesArray="moviesArray" />
 </div>  
 
 </template>
