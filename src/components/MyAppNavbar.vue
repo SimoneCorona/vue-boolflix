@@ -7,8 +7,8 @@
     </div>
     <div>
         <h1>Search a tv-series</h1>
-        <!-- <button @click="$emit('startSearch', nameFilmSearched)">Search film</button>
-        <input type="text" v-model="nameFilmSearched"> -->
+        <!-- <button @click="$emit('startSearch', nameFilmSearched)">Search film</button> -->
+        <input type="text" v-model="nameTvSeriesSearched"> 
     </div>
   </header>
 </template>
@@ -20,6 +20,7 @@ export default {
   data() {
           return {
               nameFilmSearched: '',
+              nameTvSeriesSearched: '',
           }
   },  
 }

@@ -1,7 +1,7 @@
 <template>
 
 <div>
-  <MyAppNavbar @startSearch="search($event)"/>
+  <MyAppNavbar @startSearch="search($event)" @startAnotherSearch="anotherSearch($)"/>
   <MyAppMain />
 </div>  
 

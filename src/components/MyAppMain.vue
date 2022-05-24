@@ -22,7 +22,5 @@ export default {
 <style scoped lang="scss">
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
-main {
-    height: 500px;
-}
+
 </style>

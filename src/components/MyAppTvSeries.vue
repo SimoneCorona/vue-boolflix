@@ -9,8 +9,10 @@
 
 <script>
 export default {
-     name: 'MyAppTvSeries',
-
+    name: 'MyAppTvSeries',
+    props: {
+        tvSeriesArray: Array,
+    },
 }
 </script>
 
