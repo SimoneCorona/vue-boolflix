@@ -1,17 +1,17 @@
 <template>
-  <div>
-      <h1>{{ film.title }}</h1>
-      <p>{{ film.original_title }}</p>
-      <p>{{ film.original_language }}</p>
-      <p>{{ film.vote_average }}</p>
-  </div>
+    <div>
+        <h1>{{ moviesArray.title }}</h1>
+        <h2>{{ moviesArray.original_title }}</h2>
+        <p>{{ moviesArray.original_language }}</p>
+        <p>{{ moviesArray.vote_average }}</p>
+    </div>
 </template>
 
 <script>
 export default {
     name: 'MyAppFilmCards',
     props: {
-        film: Object,
+        moviesArray: Array
     },
 }
 </script>
