@@ -2,7 +2,7 @@
 
 <div>
   <MyAppNavbar @startSearch="search($event)" @startAnotherSearch="anotherSearch($)"/>
-  <MyAppMain :moviesArray="moviesArray" />
+  <MyAppMain :moviesArray="moviesArray" :tvSeriesArray="tvSeriesArray"/>
 </div>  
 
 </template>
@@ -22,7 +22,8 @@ export default {
 
   data(){
     return {
-      moviesArray : []
+      moviesArray : [],
+      tvSeriesArray : [],
     }
   },
 
@@ -31,10 +32,14 @@ export default {
       axios.get(`https://api.themoviedb.org/3/search/movie?api_key=bb259a64a93637527e03f222b9c88ace&query=` + searchTitle)
                 .then((resp) => {
                 this.moviesArray = resp.data.results;
-                
-                console.log(resp.data.results)
+              
                 });
-            
+
+      axios.get(`https://api.themoviedb.org/3/search/tv?api_key=bb259a64a93637527e03f222b9c88ace&query=` + searchTitle)
+            .then((resp) => {
+              this.tvSeriesArray = resp.data.results;
+                
+              });
     },
   },
 }

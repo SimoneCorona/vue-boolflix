@@ -1,9 +1,9 @@
 <template>
     <div>
-        <h1>{{  }}</h1>
-        <h2>{{  }}</h2>
-        <p>{{  }}</p>
-        <p>{{  }}</p>
+        <h1>{{  tvSerie.name  }}</h1>
+        <h2>{{ tvSerie.original_name }}</h2>
+        <p>{{ tvSerie.original_language }}</p>
+        <p>{{ tvSerie.vote_average }}</p>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
 export default {
     name: 'MyAppTvSeries',
     props: {
-        tvSeriesArray: Array,
+        tvSerie: Object,
     },
 }
 </script>
