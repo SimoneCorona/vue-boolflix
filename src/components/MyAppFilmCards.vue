@@ -1,5 +1,7 @@
 <template>
     <div>
+        <img v-if="movie.poster_path != null" :src="('https://image.tmdb.org/t/p/w200' + movie.poster_path)" alt="">
+        <p v-else>Img not found!</p>
         <!-- Title -->
         <h1>{{ movie.title }}</h1>
         <h2>{{ movie.original_title }}</h2>
@@ -41,7 +43,7 @@ export default {
 
 
 img {
-    width: 20px;
-    height: 20px;
+    width: 200px;
+    height: 200px;
 }
 </style>

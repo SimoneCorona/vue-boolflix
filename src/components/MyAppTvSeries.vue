@@ -1,5 +1,7 @@
 <template>
     <div>
+        <img v-if="tvSerie.poster_path != null" :src="('https://image.tmdb.org/t/p/w200' + tvSerie.poster_path)" alt="">
+        <p v-else>Img not found!</p>
         <!-- Title -->
         <h1>{{ tvSerie.name }}</h1>
         <h2>{{ tvSerie.original_name }}</h2>
@@ -40,7 +42,7 @@ export default {
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 img {
-    width: 20px;
-    height: 20px;
+    width: 200px;
+    height: 200px;
 }
 </style>
