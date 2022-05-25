@@ -1,10 +1,16 @@
 <template>
     <div>
+        <!-- Title -->
         <h1>{{ movie.title }}</h1>
         <h2>{{ movie.original_title }}</h2>
-        <img :src = "require('../assets/img/' + movie.original_language + '.jpg')" alt="">
-        <p>{{ movie.original_language }}</p>
-        <p>{{ movie.vote_average }}</p>
+        <!-- Language icon -->
+        <img v-if="langLogo" :src = "require('../assets/img/' + movie.original_language + '.jpg')" alt="">
+        <p v-else>{{ movie.original_language }}</p>
+        <!-- Rating -->
+        <p>Vote:
+            <i class="fa-star" :class="n <= stars ? 'fas' : 'far'" v-for="n in 5" :key="n"></i>   
+        
+        </p>
     </div>
 </template>
 
@@ -14,10 +20,26 @@ export default {
     props: {
         movie: Object
     },
+    data() {
+        return {
+            flags: ["en", "it", "fr", "ja"]
+        }
+    },
+    computed: {
+        langLogo() {
+            return this.flags.includes(this.movie.original_language);
+        },
+        stars () {
+            return Math.ceil(this. movie.vote_average / 2)
+        }
+    },
 }
 </script>
 
 <style scoped lang="scss">
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
 img {
     width: 20px;
     height: 20px;

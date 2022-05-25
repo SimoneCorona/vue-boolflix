@@ -1,10 +1,15 @@
 <template>
     <div>
+        <!-- Title -->
         <h1>{{ tvSerie.name }}</h1>
         <h2>{{ tvSerie.original_name }}</h2>
-        <img :src = "require('../assets/img/' + tvSerie.original_language + '.jpg')" alt = " ">
-        <p>{{ tvSerie.original_language }}</p>
-        <p>{{ tvSerie.vote_average }}</p>
+        <!-- Language icon -->
+        <img v-if="langLogo" :src = "require('../assets/img/' + tvSerie.original_language + '.jpg')" alt = " ">
+        <p v-else>{{ tvSerie.original_language }}</p>
+        <!-- Rating -->
+        <p>Vote:
+            <i class="fa-star" :class="n <= stars ? 'fas' : 'far'" v-for="n in 5" :key="n"></i>   
+        </p>
     </div>
 </template>
 
@@ -14,10 +19,28 @@ export default {
     props: {
         tvSerie: Object,
     },
+    data() {
+        return {
+            flags: ["en", "it", "fr", "ja"]
+        }
+    },
+    computed: {
+        langLogo() {
+            return this.flags.includes(this.tvSerie.original_language);
+        },
+        stars () {
+            return Math.ceil(this.tvSerie.vote_average / 2)
+        }
+    },
 }
 
 </script>
 
 <style scoped lang="scss">
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
 
+img {
+    width: 20px;
+    height: 20px;
+}
 </style>

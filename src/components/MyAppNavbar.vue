@@ -1,7 +1,6 @@
 <template>
   <header>
     <div>
-        <h1>Search a film</h1>
         <button @click="$emit('startSearch', nameFilmSearched)">Search film</button>
         <input type="text" v-model="nameFilmSearched">
     </div>
@@ -17,7 +16,7 @@ export default {
               nameFilmSearched: '',
               nameTvSeriesSearched: '',
           }
-  },  
+        },  
 }
 
 </script>
