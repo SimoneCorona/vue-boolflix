@@ -29,5 +29,9 @@ export default {
 main {
     background-color: rgba(0, 0, 0, 0.9);
     min-height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 </style>

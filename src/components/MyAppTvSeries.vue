@@ -1,6 +1,6 @@
 <template>
     <div class="card" @mouseenter="isShow = !isShow" @mouseleave="isShow = !isShow">
-        <div>
+        <div class="poster">
             <img v-if="tvSerie.poster_path != null" :src="('https://image.tmdb.org/t/p/w200' + tvSerie.poster_path)" alt="">
             <p v-else>Img not found!</p>
         </div>
@@ -47,27 +47,6 @@ export default {
 
 <style scoped lang="scss">
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import "../style/common.scss";
 
-.card {
-    width: 200px;
-    height: 300px;
-    border: 2px solid grey;
-    color: black;
-    position: relative;
-}
-img {
-    width: 100%;
-}
-.info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-    height: 100%;
-    
-    .small_lang_logo {
-        width: 20px;
-        height: 20px;
-    }
-}
 </style>

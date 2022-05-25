@@ -3,3 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+// cards
+.card {
+    width: 250px;
+    height: 350px;
+    border: 2px solid grey;
+    color: black;
+    position: relative;
+    margin: 2rem 0;    
+    
+    .poster {
+
+        p {
+            color: white;
+        }
+    }    
+}
+
+.info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    
+    .small_lang_logo {
+        width: 20px;
+        height: 20px;
+    }
+}
