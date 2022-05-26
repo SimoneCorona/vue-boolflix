@@ -11,12 +11,36 @@
     border: 2px solid grey;
     color: black;
     position: relative;
-    margin: 2rem 0;    
+    margin: 1.5rem;
     
+    // card front
     .poster {
-
+        img{
+            height: calc(350px - 4px);
+            width: calc(250px - 4px);
+        }
         p {
             color: white;
+            text-align: center;
+            line-height: 350px;
+        }
+    }
+    // card-back
+    .info{
+        padding: 1rem;
+        overflow-y: auto;
+
+        h1, h2, span, p{
+            margin-bottom: 0.5rem;
+        }
+        h1, h2{
+            font-size: medium;
+        }
+        span{
+            display: inline-block;
+        }
+        .fas{
+            color: rgba(255, 255, 0, 0.762);
         }
     }    
 }
@@ -32,5 +56,6 @@
     .small_lang_logo {
         width: 20px;
         height: 20px;
+        margin-bottom: -5px;
     }
 }
